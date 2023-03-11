@@ -2,7 +2,7 @@
  * Apache Felix OSGi tutorial.
 **/
 
-package tutorial.example5;
+package dictionary.client;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -12,7 +12,7 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
 
-import tutorial.example2.service.DictionaryService;
+import dictionary.service.DictionaryService;
 
 /**
  * This class implements a bundle that uses a dictionary

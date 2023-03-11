@@ -2,7 +2,7 @@
  * Apache Felix OSGi tutorial.
 **/
 
-package tutorial.example2.service;
+package dictionary.service;
 
 /**
  * A simple service interface that defines a dictionary service.

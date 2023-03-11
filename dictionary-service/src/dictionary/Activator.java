@@ -2,7 +2,7 @@
  * Apache Felix OSGi tutorial.
 **/
 
-package tutorial.example2;
+package dictionary;
 
 import java.util.Hashtable;
 
@@ -11,7 +11,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceListener;
 import org.osgi.framework.ServiceEvent;
 
-import tutorial.example2.service.DictionaryService;
+import dictionary.service.DictionaryService;
 
 /**
  * This class implements a simple bundle that uses the bundle
