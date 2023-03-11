@@ -2,7 +2,7 @@
  * Apache Felix OSGi tutorial.
 **/
 
-package dictionary;
+package dictionary.service;
 
 import java.util.Hashtable;
 
@@ -10,8 +10,6 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceListener;
 import org.osgi.framework.ServiceEvent;
-
-import dictionary.service.DictionaryService;
 
 /**
  * This class implements a simple bundle that uses the bundle
@@ -35,7 +33,7 @@ public class Activator implements BundleActivator
         props.put("Language", "English");
         context.registerService(
             DictionaryService.class.getName(), new DictionaryImpl(), props);
-		System.out.println("Dictionary service registered and started successfully");		
+		System.out.println("Dictionary service registered and started successfully");	
     }
 
     /**

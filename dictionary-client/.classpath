@@ -6,6 +6,7 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="K:/Repositories/osgi-equinox/libs/felix.jar"/>
+	<classpathentry kind="lib" path="K:/Repositories/osgi-equinox/libs/felix-framework-4.0.3/bin/felix.jar"/>
+	<classpathentry kind="lib" path="/dictionary-service/bin/dictionary/service/dictionary-service.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
