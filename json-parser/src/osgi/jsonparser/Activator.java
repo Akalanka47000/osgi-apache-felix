@@ -1,4 +1,4 @@
-package osgi.http.client;
+package osgi.jsonparser;
 
 import java.util.Hashtable;
 
@@ -11,12 +11,12 @@ public class Activator implements BundleActivator
     {
         Hashtable<String, String> props = new Hashtable<String, String>();
         context.registerService(
-            HttpClient.class.getName(), new HttpClientImpl(), props);
-		System.out.println("Http client service registered and started successfully");	
+            JSONParser.class.getName(), new JSONParser(), props);
+		System.out.println("JSON parser service registered and started successfully");	
     }
 
     public void stop(BundleContext context)
     {
-    	System.out.println("Http client service unregistered successfully");	
+    	System.out.println("JSON parser service unregistered successfully");	
     }
 }

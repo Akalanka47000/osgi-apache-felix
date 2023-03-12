@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: English dictionary
-Bundle-SymbolicName: dictionary.service.DictionaryService
-Bundle-Description: A bundle that registers an English dictionary service
+Bundle-Name: HTTP Client
+Bundle-SymbolicName: osgi.http.client.HttpClient
+Bundle-Description: A bundle that offers a convenient method to make an API request
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: dictionary.service.Activator
-Export-Package: dictionary.service
+Bundle-Activator: osgi.http.client.Activator
+Export-Package: osgi.http.client
 Import-Package: org.osgi.framework
 Bundle-ActivationPolicy: lazy

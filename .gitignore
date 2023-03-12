@@ -1,3 +1,5 @@
 **/bin
+**/.idea
+**/**/Executor.java
 bin
 libs
