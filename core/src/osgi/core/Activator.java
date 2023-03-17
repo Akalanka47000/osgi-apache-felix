@@ -14,15 +14,16 @@ public class Activator implements BundleActivator
 
     private BundleContext m_context = null;
 
-    private ServiceTracker m_tracker = null;
+    private ServiceTracker<?, ?> m_tracker = null;
 
-    public void start(BundleContext context) throws InvalidSyntaxException
+    @SuppressWarnings("unchecked")
+	public void start(BundleContext context) throws InvalidSyntaxException
     {
         m_context = context;
         m_tracker = new ServiceTracker(
             m_context,
             m_context.createFilter(
-                "(&(objectClass=" + HttpClient.class.getName() + ")"),
+                "(&(objectClass=" + HttpClient.class.getName() + "))"),
             null);
         m_tracker.open();
 		try {

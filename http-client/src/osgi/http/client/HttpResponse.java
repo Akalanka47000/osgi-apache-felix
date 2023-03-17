@@ -3,7 +3,7 @@ package osgi.http.client;
 import java.util.HashMap;
 import java.util.Map;
 
-import osgi.jsonparser.*;
+import osgi.jsonparser.JSONParser;
 
 public class HttpResponse {
     int status;
@@ -13,7 +13,8 @@ public class HttpResponse {
     public HttpResponse(int status, String data) {
         this.status = status;
         this.stringData = data;
-        this.data = JSONParser.parse(data);
+        JSONParser parser = (JSONParser) ServiceFactory.getService("json-parser");
+        this.data = parser.parse(data);
     }
 
     public void setStatus(int status) {
