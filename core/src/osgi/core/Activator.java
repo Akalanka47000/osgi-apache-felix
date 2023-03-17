@@ -22,7 +22,7 @@ public class Activator implements BundleActivator
         m_tracker = new ServiceTracker(
             m_context,
             m_context.createFilter(
-                "(&(objectClass=" + HttpClient.class.getName() + ")"),
+                "(&(objectClass=" + HttpClient.class.getName() + "))"),
             null);
         m_tracker.open();
 		try {
