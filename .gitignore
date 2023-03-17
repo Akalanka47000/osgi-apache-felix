@@ -6,4 +6,5 @@ libs
 .project
 .classpath
 build.properties
+.settings
 /.metadata/

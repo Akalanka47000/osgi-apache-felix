@@ -1,6 +1,6 @@
 package osgi.logger;
 
-import file_writer.FileWriterService;
+import osgi.filewriter.FileWriterService;
 import org.osgi.framework.BundleContext;
 import org.osgi.util.tracker.ServiceTracker;
 
@@ -28,7 +28,7 @@ public class LoggerServiceImpl implements LoggerService{
 	@Override
 	public void logError(String errorMessage) {
 		String logMessage = "Error: " + errorMessage;
-        ( fileWriterService).writeToFile(logMessage);
+        (fileWriterService).writeToFile(logMessage);
 		
 	}
 

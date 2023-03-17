@@ -1,4 +1,4 @@
-package file_writer;
+package osgi.filewriter;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,4 @@
-package file_writer;
+package osgi.filewriter;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

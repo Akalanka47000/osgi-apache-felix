@@ -6,7 +6,5 @@ Bundle-Description: A bundle that provides a utility for logging
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: osgi.logger.Activator
 Export-Package: osgi.logger
-Import-Package: file_writer,
- org.osgi.framework,
- org.osgi.util.tracker;version="1.5.3"
+Import-Package: osgi.filewriter, org.osgi.framework, org.osgi.util.tracker;version="1.5.3"
 Bundle-ActivationPolicy: lazy
