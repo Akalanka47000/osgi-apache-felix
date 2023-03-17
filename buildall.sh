@@ -1,8 +1,13 @@
-cd json-parser
-ant build
+projects=(
+    [0]="http-client"
+    [1]="json-parser"
+    [2]="core"
+)
+current=$(pwd)
 
-cd ../http-client
-ant build
+for i in ${projects[@]}; do
+    cd $current
+    cd $i
+    ant build
+done
 
-cd ../core
-ant build
