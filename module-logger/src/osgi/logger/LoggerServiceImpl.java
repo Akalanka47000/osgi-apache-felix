@@ -24,6 +24,7 @@ public class LoggerServiceImpl implements LoggerService{
 	public void stop(BundleContext bundleContext) throws Exception{
 		
 	}
+	
 	@Override
 	public void logError(String errorMessage) {
 		String logMessage = "Error: " + errorMessage;

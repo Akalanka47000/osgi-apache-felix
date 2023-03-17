@@ -1,5 +1,5 @@
 package file_writer;
 
 public interface FileWriterService {
-	void writeToFile(String data);
+	public void writeToFile(String data);
 }

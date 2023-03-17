@@ -1,8 +1,8 @@
 package osgi.logger;
 
 public interface LoggerService {
-	void logError(String errorMessage);
-    void logPerformanceMetrics(long elapsedTime);
-    void logRequestData(String requestData);
-    void logResponseData(String responseData);
+	public void logError(String errorMessage);
+	public void logPerformanceMetrics(long elapsedTime);
+	public void logRequestData(String requestData);
+	public void logResponseData(String responseData);
 }

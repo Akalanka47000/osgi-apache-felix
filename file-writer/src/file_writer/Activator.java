@@ -5,18 +5,16 @@ import org.osgi.framework.BundleContext;
 
 public class Activator implements BundleActivator {
 
-	private static BundleContext context;
-
-	static BundleContext getContext() {
-		return context;
+	private FileWriterImpl fileWriterImpl;
+	
+	public void start(BundleContext context) throws Exception {
+		fileWriterImpl = new FileWriterImpl();
+		context.registerService(FileWriterService.class.getName(),fileWriterImpl, null);
+		fileWriterImpl.start(context);
 	}
 
-	public void start(BundleContext bundleContext) throws Exception {
-		Activator.context = bundleContext;
-	}
-
-	public void stop(BundleContext bundleContext) throws Exception {
-		Activator.context = null;
+	public void stop(BundleContext context) throws Exception {
+		fileWriterImpl.stop(context);
 	}
 
 }
