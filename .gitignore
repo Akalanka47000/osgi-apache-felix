@@ -3,4 +3,7 @@
 **/**/Executor.java
 bin
 libs
+.project
+.classpath
+build.properties
 /.metadata/
