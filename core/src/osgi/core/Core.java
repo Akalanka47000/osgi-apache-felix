@@ -23,9 +23,9 @@ public class Core {
 		
 		try {
 	       IIntervalExecutor executor = (IIntervalExecutor) tracker.getService();
-	       executor.setCommand(new CatFactFetch());
+	       executor.setCommand(new CatFactFetch(context));
 	       executor.setInitialDelay(300);
-	       executor.setInterval(1000);
+	       executor.setInterval(3000);
 	       executor.run(context);
 		} catch (Exception e) {
 			System.out.println("Error");

@@ -52,12 +52,11 @@ public class IntervalExecutor implements IIntervalExecutor{
 			@Override
 			public void run() {
 				try {
-					command.onInitiation();
+					command.onInitiation(context);
 					command.execute(context);
+					command.onSuccess(context);
 				} catch (Exception e) {
-					command.onError(e);
-				} finally {
-					command.onSuccess();
+					command.onError(context, e);
 				}
 			}
 		};
