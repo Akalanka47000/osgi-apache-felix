@@ -6,5 +6,5 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: osgi.filewriter.Activator
 Import-Package: org.osgi.framework
 Export-Package: osgi.filewriter
-Automatic-Module-Name: file.writer
+Automatic-Module-Name: filewriter
 Bundle-ActivationPolicy: lazy
