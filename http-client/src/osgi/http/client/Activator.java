@@ -24,7 +24,7 @@ public class Activator implements BundleActivator
         m_tracker = new ServiceTracker<Object, Object>(m_context, m_context.createFilter("(&(objectClass=" + JSONParser.class.getName() + "))"), null);
         m_tracker.open();
 
-        ServiceFactory.setService("json-parser", (JSONParser) m_tracker.getService());
+        ServiceMap.setService("json-parser", (JSONParser) m_tracker.getService());
 
         Hashtable<String, String> props = new Hashtable<String, String>();
         registration = context.registerService(

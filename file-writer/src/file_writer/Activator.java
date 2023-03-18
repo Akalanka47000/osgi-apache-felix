@@ -10,9 +10,9 @@ public class Activator implements BundleActivator {
 	
 	public void start(BundleContext context) throws Exception {
 		System.out.println("File-writer started");
-		FileWriterService fileWriterService = new FileWriterImpl();
+		IFileWriter fileWriter = new FileWriterImpl();
 		
-		fileWriterRegistration = context.registerService(FileWriterService.class.getName(), fileWriterService, null);
+		fileWriterRegistration = context.registerService(IFileWriter.class.getName(), fileWriter, null);
 		
 	}
 
