@@ -34,27 +34,32 @@ public class OutputHandlerImpl implements OutputHandlerService{
     }
 
 	@Override
-	public void PrintToConsole(String Input) {
-		
+	public void PrintToConsole(String Input) {		
 		Input = Input.trim();
+		System.out.println(Input);
 				
 	}
 
 	@Override
 	public void formatAndPrint(String Input) {
 		Input = Input.trim();
+		String OutputToPrint = stringManipulator.formatParagraph(Input);
+		System.out.println(OutputToPrint);
 		
 	}
 
 	@Override
 	public void PrintWithBorder(String Input) {
 		Input = Input.trim();
+		String OutputToPrint = stringManipulator.formatParagraph(Input);
+		OutputToPrint = stringManipulator.addBorder(OutputToPrint);
+		System.out.println(OutputToPrint);
 	}
 
 	@Override
 	public void PrintList(String[] Input) {
-		
-		
+		String OutputToPrint = stringManipulator.combineAll(Input);
+		System.out.println(OutputToPrint);
 		
 	}
 
