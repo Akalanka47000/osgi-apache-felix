@@ -12,12 +12,12 @@ public class Activator implements BundleActivator {
 		System.out.println("string manipulator started");
 		StringManipulatorService stringmanipulatorService = new StringManipulatorImpl();
 		
-		stringmanipulatorRegistration = context.registerService(StringManipulatorService.class.getName(), StringManipulatorImpl.class.getName(), null);
+		stringmanipulatorRegistration = context.registerService(StringManipulatorService.class.getName(), stringmanipulatorService, null);
 		
 	}
 
 	public void stop(BundleContext context) throws Exception {
-		System.out.println("file-writer Stopped");
+		System.out.println("string manipulator Stopped");
 		stringmanipulatorRegistration.unregister();
 	}
 
