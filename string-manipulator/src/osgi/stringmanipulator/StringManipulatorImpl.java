@@ -83,5 +83,4 @@ public class StringManipulatorImpl implements StringManipulatorService{
 		return finalOut;
 	}
     
-
 }
