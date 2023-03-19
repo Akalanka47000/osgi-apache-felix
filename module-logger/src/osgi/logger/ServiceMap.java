@@ -1,8 +1,8 @@
-package osgi.http.client;
+package osgi.logger;
 
 import java.util.HashMap;
 
-public class ServiceFactory {
+public class ServiceMap {
 
     private static HashMap<String, Object> services = new HashMap<String, Object>();
 

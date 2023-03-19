@@ -5,4 +5,5 @@ public interface LoggerService {
 	public void logPerformanceMetrics(long elapsedTime);
 	public void logRequestData(String requestData);
 	public void logResponseData(String responseData);
+	public void logWarnings(String warning);
 }

@@ -6,30 +6,51 @@ import java.io.IOException;
 
 import org.osgi.framework.BundleContext;
 
-public class FileWriterImpl implements FileWriterService{
+public class FileWriterImpl implements IFileWriter {
 	
-	private final String FILE_NAME = "log.txt";
+	private final String DEFAULT_FILE_NAME = "log.txt";
 	
-	public FileWriterImpl() {
-		
-	}
-	
-	public void start(BundleContext bundleContext) throws Exception {
-    }
-
-    public void stop(BundleContext bundleContext) throws Exception {
-    }
-    
-	@Override
-	public void writeToFile(String data) {
+	private boolean separateLogLevels = false;
+   
+	private void write(String level, String data, String path) {
 		try {
-            File file = new File(FILE_NAME);
+            File file = new File(path);
             FileWriter fileWriter = new FileWriter(file, true);
-            fileWriter.write(data + "\n");
+            fileWriter.write("["+level + "] --> " + data + "\n");
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
+	}
+	
+	@Override
+	public void info(String data) {
+		this.write("INFO", data, DEFAULT_FILE_NAME);
+	}
+	
+	@Override
+	public void info(String data, String path) {
+		this.write("INFO",  data, path);
+	}
+	
+	@Override
+	public void error(String data) {
+		this.write("ERROR", data, DEFAULT_FILE_NAME);
+	}
+	
+	@Override
+	public void error(String data, String path) {
+		this.write("ERROR",  data, path);
+	}
+	
+	@Override
+	public void warn(String data) {
+		this.write("WARN", data, DEFAULT_FILE_NAME);
+	}
+	
+	@Override
+	public void warn(String data, String path) {
+		this.write("WARN",  data, path);
 	}
 
 }
