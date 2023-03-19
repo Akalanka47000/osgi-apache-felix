@@ -1,4 +1,4 @@
-package osgi.stringmanipulator;
+package osgi.strings;
 
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;

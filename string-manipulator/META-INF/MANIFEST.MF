@@ -1,10 +1,10 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: stringmanipulator
-Bundle-SymbolicName: osgi.stringmanipulator
+Bundle-Name: strings
+Bundle-SymbolicName: osgi.strings
 Bundle-Version: 1.0.0.qualifier
-Bundle-Activator: osgi.stringmanipulator.Activator
+Bundle-Activator: osgi.strings.Activator
 Import-Package: org.osgi.framework
-Export-Package: osgi.stringmanipulator
-Automatic-Module-Name: stringmanipulator
+Export-Package: osgi.strings
+Automatic-Module-Name: osgi.strings
 Bundle-ActivationPolicy: lazy

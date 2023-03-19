@@ -1,4 +1,4 @@
-package osgi.stringmanipulator;
+package osgi.strings;
 
 import java.io.File;
 import java.io.FileWriter;

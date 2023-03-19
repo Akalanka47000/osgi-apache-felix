@@ -1,4 +1,4 @@
-package osgi.stringmanipulator;
+package osgi.strings;
 
 public interface StringManipulatorService {
 	public String addBorder(String input);
