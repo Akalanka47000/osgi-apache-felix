@@ -13,8 +13,7 @@ public class Activator implements BundleActivator
     public void start(BundleContext context)
     {
         Hashtable<String, String> props = new Hashtable<String, String>();
-        context.registerService(
-            JSONParser.class.getName(), new JSONParserImpl(), props);
+        context.registerService(JSONParser.class.getName(), new JSONParserImpl(), props);
 		System.out.println("JSON parser service registered and started successfully");	
     }
 
