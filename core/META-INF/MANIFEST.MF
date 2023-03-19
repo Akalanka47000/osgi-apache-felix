@@ -5,5 +5,5 @@ Bundle-SymbolicName: osgi.core.Core
 Bundle-Description: Core bundle which makes use of the other bundles
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: osgi.core.Activator
-Import-Package: org.osgi.framework, org.osgi.util.tracker, osgi.http.client
+Import-Package: org.osgi.framework, org.osgi.util.tracker, osgi.http.client, osgi.intervalexecutor, osgi.command, osgi.logger
 Bundle-ActivationPolicy: lazy
