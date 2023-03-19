@@ -1,4 +1,4 @@
-package file_writer;
+package osgi.filewriter;
 
 public interface IFileWriter {
 	public void info(String data);

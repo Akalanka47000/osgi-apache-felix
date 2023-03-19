@@ -26,7 +26,6 @@ public class CatFactFetch implements ICommand, Serializable {
 					null);
 			tracker.open();
 			logger = (LoggerService) tracker.getService();
-			logger.start(context);
 			tracker.close();
 		} catch (Exception e) {
 			System.out.println("ERROR");

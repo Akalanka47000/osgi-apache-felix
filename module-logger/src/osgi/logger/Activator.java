@@ -5,7 +5,7 @@ import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.util.tracker.ServiceTracker;
 
-import file_writer.IFileWriter;
+import osgi.filewriter.IFileWriter;
 
 public class Activator implements BundleActivator
 {
