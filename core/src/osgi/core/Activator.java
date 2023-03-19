@@ -16,7 +16,6 @@ public class Activator implements BundleActivator
     @SuppressWarnings("unchecked")
 	public void start(BundleContext context) throws InvalidSyntaxException
     {
-       
         try {
             Core.run(context);
         } catch (Exception ex) { 

@@ -63,10 +63,7 @@ public class CatFactFetch implements ICommand, Serializable {
 		tracker.close();
 		
         HttpResponse res = client.get("https://catfact.ninja/fact");
-        System.out.println(res.getStatus());
-        System.out.println(res.getData());
-
-        output.PrintWithBorder((String) res.getData().get("message"));
+        output.printWithBorder(res.getData().get("fact").toString());
 	}
 
 	@Override

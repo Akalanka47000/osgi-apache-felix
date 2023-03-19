@@ -11,7 +11,7 @@ public class Activator implements BundleActivator {
 	ServiceRegistration outputHandlerRegistration;
 	
 	public void start(BundleContext context) throws Exception {
-		System.out.println("outputHandler started");
+		System.out.println("Output handler started");
 		OutputHandlerService outputHandlerService = new OutputHandlerImpl(context);
 		
 		outputHandlerRegistration = context.registerService(OutputHandlerService.class.getName(), outputHandlerService, null);
@@ -19,7 +19,7 @@ public class Activator implements BundleActivator {
 	}
 
 	public void stop(BundleContext context) throws Exception {
-		System.out.println("string manipulator Stopped");
+		System.out.println("Output handler Stopped");
 		outputHandlerRegistration.unregister();
 	}
 

@@ -1,8 +1,8 @@
 package osgi.outputhandler;
 
 public interface OutputHandlerService {
-	public void PrintToConsole(String Input);
+	public void printToConsole(String Input);
 	public void formatAndPrint(String Input);
-	public void PrintWithBorder(String Input);
-	public void PrintList(String[] Input);
+	public void printWithBorder(String Input);
+	public void printList(String[] Input);
 }

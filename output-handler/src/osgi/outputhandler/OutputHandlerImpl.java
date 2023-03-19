@@ -34,7 +34,7 @@ public class OutputHandlerImpl implements OutputHandlerService{
     }
 
 	@Override
-	public void PrintToConsole(String Input) {		
+	public void printToConsole(String Input) {		
 		Input = Input.trim();
 		System.out.println(Input);
 				
@@ -49,7 +49,7 @@ public class OutputHandlerImpl implements OutputHandlerService{
 	}
 
 	@Override
-	public void PrintWithBorder(String Input) {
+	public void printWithBorder(String Input) {
 		Input = Input.trim();
 		String OutputToPrint = stringManipulator.formatParagraph(Input);
 		OutputToPrint = stringManipulator.addBorder(OutputToPrint);
@@ -57,7 +57,7 @@ public class OutputHandlerImpl implements OutputHandlerService{
 	}
 
 	@Override
-	public void PrintList(String[] Input) {
+	public void printList(String[] Input) {
 		String OutputToPrint = stringManipulator.combineAll(Input);
 		System.out.println(OutputToPrint);
 		
