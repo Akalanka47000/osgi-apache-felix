@@ -16,7 +16,7 @@ public class FileWriterImpl implements IFileWriter {
 		try {
             File file = new File(path);
             FileWriter fileWriter = new FileWriter(file, true);
-            fileWriter.write("["+level + "] --> " + data + "\n");
+            fileWriter.write(data + "\n");
             fileWriter.close();
         } catch (IOException e) {
             e.printStackTrace();
